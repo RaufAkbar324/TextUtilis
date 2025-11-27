@@ -18,6 +18,15 @@ export default function TextArea(props) {
     console.log("On Change");
     setText(event.target.value);
   };
+  const handleOnClear=()=>{
+    setText("");
+  }
+  const handleOnCopy=()=>{
+    let a=document.getElementById("myBox");
+    a.select();
+    navigator.clipboard.writeText(a.value);
+  }
+
 
   // setText("New Text");
   return (
@@ -25,6 +34,7 @@ export default function TextArea(props) {
       <div className="container text-start w-50">
         <h3 className="my-5">TEXTUTILIS APP</h3>
         <textarea
+          id="myBox"
           className="form-control"
           rows="4"
           placeholder="Enter your Text here..."
@@ -36,6 +46,12 @@ export default function TextArea(props) {
         </button>
         <button className="btn btn-info mx-3" onClick={handledownClick}>
           LowerCase
+        </button>
+        <button className="btn btn-danger" onClick={handleOnClear}>
+          Clear Text
+        </button>
+        <button className="btn btn-primary mx-3" onClick={handleOnCopy}>
+          Copy Text
         </button>
 
         <h1 className="my-3">Word Count</h1>
