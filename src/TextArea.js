@@ -26,6 +26,10 @@ export default function TextArea(props) {
     a.select();
     navigator.clipboard.writeText(a.value);
   }
+  const RemoveExtraSpace=()=>{
+    let newText=text.split(/[ ]+/);
+    setText(newText.join(" "));
+  }
 
 
   // setText("New Text");
@@ -48,10 +52,13 @@ export default function TextArea(props) {
           LowerCase
         </button>
         <button className="btn btn-danger" onClick={handleOnClear}>
-          Clear Text
+          ClearText
         </button>
         <button className="btn btn-primary mx-3" onClick={handleOnCopy}>
-          Copy Text
+          CopyText
+        </button>
+        <button className="btn btn-warning" onClick={RemoveExtraSpace}>
+          RemoveExtraSpace
         </button>
 
         <h1 className="my-3">Word Count</h1>
