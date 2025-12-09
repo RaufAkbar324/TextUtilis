@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 export default function Navbar(props) {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-dark text-white">
+      <nav className={`navbar navbar-expand-lg bg-${props.mode} text-${props.mode==='black'?'white':'black'}`}>
         <div className="container-fluid">
-          <a className="navbar-brand text-white" href="#">
+          <a className={`navbar-brand text-${props.mode==='black'?'white':'black'}`} href="#">
             {props.title}
           </a>
           <button
@@ -23,27 +23,33 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarScroll">
             <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
               <li className="nav-item">
-                <a className="nav-link active text-white" aria-current="page" href="#">
+                <a
+                  className={`nav-link active text-${props.mode==='black'?'white':'black'}`}
+                  aria-current="page"
+                  href="#"
+                >
                   {props.HomeText}
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white" href="#">
+                <a className={`nav-link text-${props.mode==='black'?'white':'black'}`} href="#">
                   {props.AboutText}
                 </a>
               </li>
             </ul>
-            <form className="d-flex" role="search">
+
+            <div className="form-check form-switch" onClick={props.toggleMode}>
               <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
+                className="form-check-input"
+                type="checkbox"
+                value=""
+                id="checkNativeSwitch"
+                switch
               />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+              <label className="form-check-label" for="checkNativeSwitch">
+                Enable DarkMode
+              </label>
+            </div>
           </div>
         </div>
       </nav>

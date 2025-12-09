@@ -35,7 +35,7 @@ export default function TextArea(props) {
   // setText("New Text");
   return (
     <>
-      <div className="container text-start w-50">
+      <div className="container text-start w-50" style={{color: props.mode==='black'?'white':'black'}}>
         <h3 className="my-5">TEXTUTILIS APP</h3>
         <textarea
           id="myBox"
