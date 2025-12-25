@@ -15,7 +15,7 @@ function App() {
     }
     else{
       setmode('black');
-      document.body.style.backgroundColor='black';
+      document.body.style.backgroundColor='Tomato';
     }
   }
   return (

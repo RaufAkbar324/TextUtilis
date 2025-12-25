@@ -35,9 +35,10 @@ export default function TextArea(props) {
   // setText("New Text");
   return (
     <>
-      <div className="container text-start w-50" style={{color: props.mode==='black'?'white':'black'}}>
+      <div className="container text-start w-50" style={{backgroundColor: props.mode==='black'?'tomato':'white', color : props.mode==='black'?'white':'black'}}>
         <h3 className="my-5">TEXTUTILIS APP</h3>
         <textarea
+          style={{backgroundColor: props.mode==='black'?'tomato':'white', color : props.mode==='black'?'white':'black'}}
           id="myBox"
           className="form-control"
           rows="4"
@@ -66,8 +67,8 @@ export default function TextArea(props) {
           {text.split(" ").length - 1} <span className="fw-bold">words</span>{" "}
           and {text.length} <span className="fw-bold">characters</span>
         </p>
-        <h1 className="my-3">Text Preview</h1>
-        <p>{text}</p>
+        <h1 className="my-3" >Text Preview</h1>
+        <p>{text.length===0?"Enter something to preview it here":text}</p>
       </div>
     </>
   );
