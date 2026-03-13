@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   return (
     <div>
       <nav className={`navbar navbar-expand-lg bg-${props.mode} text-${props.mode==='black'?'white':'black'}`}>
         <div className="container-fluid">
-          <a className={`navbar-brand text-${props.mode==='black'?'white':'black'}`} href="#">
+          <Link className={`navbar-brand text-${props.mode==='black'?'white':'black'}`} href="/">
             {props.title}
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -23,18 +24,18 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarScroll">
             <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
               <li className="nav-item">
-                <a
+                <Link
                   className={`nav-link active text-${props.mode==='black'?'white':'black'}`}
                   aria-current="page"
-                  href="#"
+                  to="/"
                 >
                   {props.HomeText}
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className={`nav-link text-${props.mode==='black'?'white':'black'}`} href="#">
+                <Link className={`nav-link text-${props.mode==='black'?'white':'black'}`} to="/about">
                   {props.AboutText}
-                </a>
+                </Link>
               </li>
             </ul>
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Alert from "./Alert";
 
 export default function TextArea(props) {
   const [text, setText] = useState("");
@@ -8,11 +9,13 @@ export default function TextArea(props) {
     console.log("UpperCase Was clicked" + text);
     let newText = text.toUpperCase();
     setText(newText);
+    props.showalert('Converted to UpperCase','alert-success');
   };
   const handledownClick = () => {
     console.log("UpperCase Was clicked" + text);
     let newText = text.toLowerCase();
     setText(newText);
+    props.showalert('Converted to LowerCase','alert-success');
   };
   const handleOnChange = (event) => {
     console.log("On Change");
@@ -20,15 +23,18 @@ export default function TextArea(props) {
   };
   const handleOnClear=()=>{
     setText("");
+    props.showalert('Text Cleared','alert-success');
   }
   const handleOnCopy=()=>{
     let a=document.getElementById("myBox");
     a.select();
     navigator.clipboard.writeText(a.value);
+    props.showalert('Text Copied','alert-success');
   }
   const RemoveExtraSpace=()=>{
     let newText=text.split(/[ ]+/);
     setText(newText.join(" "));
+    props.showalert('Extra Space Removed','alert-success');
   }
 
 
