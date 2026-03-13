@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/RaufAkbar324/TextUtilis/static/css/main.3b71cc2a.css",
+    "main.js": "/RaufAkbar324/TextUtilis/static/js/main.66457d08.js",
+    "static/js/453.9799b89c.chunk.js": "/RaufAkbar324/TextUtilis/static/js/453.9799b89c.chunk.js",
+    "index.html": "/RaufAkbar324/TextUtilis/index.html",
+    "main.3b71cc2a.css.map": "/RaufAkbar324/TextUtilis/static/css/main.3b71cc2a.css.map",
+    "main.66457d08.js.map": "/RaufAkbar324/TextUtilis/static/js/main.66457d08.js.map",
+    "453.9799b89c.chunk.js.map": "/RaufAkbar324/TextUtilis/static/js/453.9799b89c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b71cc2a.css",
+    "static/js/main.66457d08.js"
+  ]
+}
