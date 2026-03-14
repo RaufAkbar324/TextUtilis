@@ -40,7 +40,7 @@ export default function About() {
               aria-controls="collapseOne"
               style={myStyle}
             >
-              Accordion Item #1
+              What is Text-Utilis?
             </button>
           </h2>
           <div
@@ -50,14 +50,11 @@ export default function About() {
             style={myStyle}
           >
             <div className="accordion-body">
-              <strong>This is the first item’s accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              <strong>Text-Utilis is a simple text helper tool that helps you analyze your text.
+                 It can quickly show the number of characters, number of words, and other 
+                useful details in your text. It is very helpful for students, writers, 
+                and content creators who want to check their text easily.
+                </strong>
             </div>
           </div>
         </div>
@@ -72,7 +69,7 @@ export default function About() {
               aria-controls="collapseTwo"
               style={myStyle}
             >
-              Accordion Item #2
+              How does Text-Utilis count words and characters?
             </button>
           </h2>
           <div
@@ -82,14 +79,9 @@ export default function About() {
             style={myStyle}
           >
             <div className="accordion-body">
-              <strong>This is the second item’s accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              You just need to paste or type your text into the text box.
+               The tool will automatically calculate and display the total
+                number of words, characters, and other text statistics instantly.
             </div>
           </div>
         </div>
@@ -104,7 +96,7 @@ export default function About() {
               aria-controls="collapseThree"
               style={myStyle}
             >
-              Accordion Item #3
+              Is Text-Utilis free to use?
             </button>
           </h2>
           <div
@@ -114,14 +106,10 @@ export default function About() {
             style={myStyle}
           >
             <div className="accordion-body">
-              <strong>This is the third item’s accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              Yes, Text-Utilis is completely free to use.
+               You can analyze your text, count words, 
+               check characters, and use other text tools
+                without paying anything.
             </div>
           </div>
         </div>

@@ -29,6 +29,7 @@ export default function TextArea(props) {
     let a=document.getElementById("myBox");
     a.select();
     navigator.clipboard.writeText(a.value);
+    document.getSelection().removeAllRanges();
     props.showalert('Text Copied','alert-success');
   }
   const RemoveExtraSpace=()=>{
@@ -52,25 +53,25 @@ export default function TextArea(props) {
           onChange={handleOnChange}
           value={text}
         ></textarea>
-        <button className="btn btn-success my-3" onClick={handleUpClick}>
+        <button disabled={text.length===0} className="btn btn-success my-1 mx-1" onClick={handleUpClick}>
           UpperCase
         </button>
-        <button className="btn btn-info mx-3" onClick={handledownClick}>
+        <button disabled={text.length===0} className="btn btn-info mx-1 my-1" onClick={handledownClick}>
           LowerCase
         </button>
-        <button className="btn btn-danger" onClick={handleOnClear}>
+        <button disabled={text.length===0} className="btn btn-danger mx-1 my-1" onClick={handleOnClear}>
           ClearText
         </button>
-        <button className="btn btn-primary mx-3" onClick={handleOnCopy}>
+        <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleOnCopy}>
           CopyText
         </button>
-        <button className="btn btn-warning" onClick={RemoveExtraSpace}>
+        <button disabled="text.length===0" className="btn btn-warning mx-1 my-1" onClick={RemoveExtraSpace}>
           RemoveExtraSpace
         </button>
 
         <h1 className="my-3">Word Count</h1>
         <p>
-          {text.split(" ").length - 1} <span className="fw-bold">words</span>{" "}
+          {text.split(" ").filter((element)=> {return element.length!==0}).length} <span className="fw-bold">words</span>{" "}
           and {text.length} <span className="fw-bold">characters</span>
         </p>
         <h1 className="my-3" >Text Preview</h1>
